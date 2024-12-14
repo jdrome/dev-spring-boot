@@ -48,17 +48,6 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!--Add Support for Spring Boot Actuator-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<!--Add support for Spring Boot Security-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
 
 	</dependencies>
 
