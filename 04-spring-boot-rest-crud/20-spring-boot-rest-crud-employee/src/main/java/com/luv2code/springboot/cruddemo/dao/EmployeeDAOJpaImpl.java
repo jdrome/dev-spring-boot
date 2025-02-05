@@ -30,4 +30,31 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
         // return the results
         return employees;
     }
+
+    @Override
+    public Employee findById(int id) {
+        // get employee
+        Employee theEmployee = entityManager.find(Employee.class, id);
+
+        // return employee
+        return theEmployee;
+    }
+
+    @Override
+    public Employee save(Employee employee) {
+        // Find employee
+        Employee dbEmployee = entityManager.merge(employee);
+
+        // return employee
+        return dbEmployee;
+    }
+
+    @Override
+    public void deleteById(int id) {
+        // find the employee by id
+        Employee theEmployee = entityManager.find(Employee.class, id);
+
+        // remove the employee
+        entityManager.remove(theEmployee);
+    }
 }
